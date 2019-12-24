@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>git基础</title>
+    <title>Framework7</title>
 
     <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
     <meta name="author" content="Hakim El Hattab">
@@ -42,189 +42,114 @@
     <!-- Any section element inside of this container is displayed as a slide -->
     <div class="slides">
         <section>
-            <h1>git基础</h1>
+            <h1>Framework7</h1>
 
-            <h3>简单的git命令及使用介绍</h3>
+            <h3>Framework7简单介绍</h3>
 
             <p>
-                <small>tob前端组-白旨煜</small>
+                <small>toc-fe-白旨煜</small>
             </p>
         </section>
 
         <section data-background="#ddd">
             <h2>简介</h2>
 
-            <p style="text-align: left;">Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。</p>
+            <p style="text-align: left;">Framework7用于构建iOS，Android和桌面应用程序的全功能框架</p>
         </section>
 
         <section data-background="#4d7e65">
-            <h2>git工作流程</h2>
+            <h2>为各平台构建应用</h2>
             <table>
                 <tbody>
                 <tr>
-                    <td>1、克隆 Git 资源作为工作目录。</td>
+                    <td>借助Framework7提供的出色的UI组件集，它可以创建具有原生外观的Web应用程序</td>
                 <tr>
                 <tr>
-                    <td>2、在克隆的资源上添加或修改文件。</td>
+                    <td>1、渐进式Web应用程序（PWA）</td>
                 <tr>
                 <tr>
-                    <td>3、如果其他人修改了，你可以更新资源。</td>
+                    <td>2、iOS和Android应用程序</td>
                 <tr>
                 <tr>
-                    <td>4、在提交前查看修改。</td>
-                <tr>
-                <tr>
-                    <td>5、提交修改。</td>
-                <tr>
-                <tr>
-                    <td>6、在修改完成后，如果发现错误，可以撤回提交并再次修改并提交。</td>
+                    <td>3、Framework7与Electron和NW.js等额外工具结合使用，可以构建本机桌面应用程序</td>
                 <tr>
                 </tbody>
             </table>
         </section>
 
         <section data-background="#4d7e65">
-        	<h2>创建新仓库</h2>
-            <p>创建新文件夹，打开，然后执行</p>
-            <pre><code style="text-align: center;">git init</code></pre>
-            <p>以创建新的 git 仓库。</p>
+        	<h2>使用习惯用的框架和打包工具</h2>
+			<table>
+			    <tbody>
+					<tr>
+						<td>1、jquery</td>
+					<tr>
+					<tr>
+						<td>2、vue.js</td>
+					<tr>
+					<tr>
+						<td>3、React</td>
+					<tr>
+					<tr>
+						<td>4、gulp</td>
+					<tr>
+					<tr>
+						<td>5、rollup.js</td>
+					<tr>
+					<tr>
+						<td>6、webpack</td>
+					<tr>
+				</tbody>
+			</table>
         </section>
 
         <section data-background="#b5533c">
-            <h2>检出仓库</h2>
-            <p>执行如下命令以创建一个本地仓库的克隆版本：</p>
-            <pre><code style="text-align: center;">git clone /path/to/repository</code></pre>
-            <p>如果是远端服务器上的仓库，你的命令会是这个样子：</p>
-            <pre><code style="text-align: center;">git clone username@host:/path/to/repository</code></pre>
+            <h2>Framework7生态系统</h2>
+            <table>
+                <tbody>
+            		<tr>
+            			<td>1、Framework7 Core</td>
+            		<tr>
+            		<tr>
+            			<td>2、Framework7 Vue</td>
+            		<tr>
+            		<tr>
+            			<td>3、Framework7 React</td>
+            		<tr>
+            		<tr>
+            			<td>4、Framework7 CLI</td>
+            		<tr>
+            		<tr>
+            			<td>5、Framework7 Icons</td>
+            		<tr>
+            		<tr>
+            			<td>6、Template7</td>
+            		<tr>
+					<tr>
+						<td>7、dom7</td>
+					<tr>
+            	</tbody>
+            </table>
         </section>
 
         <section data-background="#b5533c">
-            <h2>Git 工作区、暂存区和版本库</h2>
+            <h2>开始构建项目</h2>
 
-            <p><img src="img/1.png"></p>
+            <p>npm i framework7-cli cordova -g</p>
+			<p>framework7 create --ui</p>
         </section>
 
         <section data-background="#369">
-        	<h2>添加和提交</h2>
-            <p>把它们添加到暂存区，使用如下命令：</p>
-            <pre><code style="text-align: center;">git add [filename]</code></pre>
-            <pre><code style="text-align: center;">git add *</code></pre>
-            <p>这是 git 基本工作流程的第一步；使用如下命令以实际提交改动：</p>
-            <pre><code style="text-align: center;">git commit -m "代码提交信息"</code></pre>
-            <p>现在，你的改动已经提交到了 HEAD，但是还没到你的远端仓库。</p>
-        </section>
-
-        <section data-background="#369">
-            <h2>推送改动</h2>
-            <p>执行如下命令以将这些改动提交到远端仓库：</p>
-            <pre><code style="text-align: center;">git push origin master</code></pre>
-            <p>可以把 master 换成你想要推送的任何分支。</p>
-            
-            <p>如果你还没有克隆现有仓库，并欲将你的仓库连接到某个远程服务器，你可以使用如下命令添加：</p>
-            <pre><code style="text-align: center;">git remote add origin [server]</code></pre>
-            <p>如此你就能够将你的改动推送到所添加的服务器上去了。</p>
-        </section>
-
-        <section data-background="#369">
-            <h2>分支</h2>
-            <p>分支是用来将特性开发绝缘开来的。在你创建仓库的时候，master 是“默认的”分支。在其他分支上进行开发，完成后再将它们合并到主分支上。</p>
-        </section>
-
-        <section data-background="#369">
-            <h2>分支操作</h2>
-            <p>创建一个叫做“feature_x”的分支，并切换过去：</p>
-            <pre><code style="text-align: center;">git checkout -b feature_x</code></pre>
-            <p>切换回主分支：</p>
-            <pre><code style="text-align: center;">git checkout master</code></pre>
-            <p>再把新建的分支删掉：</p>
-            <pre><code style="text-align: center;">git branch -d feature_x</code></pre>
-            <p>除非你将分支推送到远端仓库，不然该分支就是 不为他人所见的：</p>
-            <pre><code style="text-align: center;">git push origin [branch]</code></pre>
-        </section>
-
-        <section data-background="#369">
-            <h2>更新与合并</h2>
-            <p>要更新你的本地仓库至最新改动，执行：</p>
-            <pre><code style="text-align: center;">git pull</code></pre>
-            <p>要合并其他分支到你的当前分支（例如 master），执行：</p>
-            <pre><code style="text-align: center;">git merge [branch]</code></pre>
-            <p>merge可能出现冲突（conflicts）,改完之后，你需要执行如下命令以将它们标记为合并成功：</p>
-            <pre><code style="text-align: center;">git add [filename]</code></pre>
-            <p>在合并改动之前，你可以使用如下命令预览差异：</p>
-            <pre><code style="text-align: center;">git diff [source_branch] [target_branch]</code></pre>
-        </section>
-
-        <section data-background="#369">
-            <h2>标签</h2>
-            <p>为软件发布创建标签是推荐的。</p>
-            <p>执行如下命令创建一个叫做 1.0.0 的标签：</p>
-            <pre><code style="text-align: center;">git tag 1.0.0 1b2e1d63ff</code></pre>
-            <p>1b2e1d63ff 是你想要标记的提交 ID 的前 10 位字符。可以使用下列命令获取提交 ID：</p>
-            <pre><code style="text-align: center;">git log</code></pre>
-            <p>你也可以使用少一点的提交 ID 前几位，只要它的指向具有唯一性。</p>
-        </section>
-
-        <section data-background="#369">
-            <h2>log</h2>
-            <p>如果你想了解本地仓库的历史记录，可以使用: </p>
-            <pre><code style="text-align: center;">git log</code></pre>
-            <p>只看某一个人的提交记录:</p>
-            <pre><code style="text-align: center;">git log --author=bob</code></pre>
-            <p>一个压缩后的每一条提交记录只占一行的输出:</p>
-            <pre><code style="text-align: center;">git log --pretty=oneline</code></pre>
-        </section>
-
-        <section data-background="#369">
-            <h2>log</h2>
-            <p>看看哪些文件改变了:</p>
-            <pre><code style="text-align: center;">git log --name-status</code></pre>
-            <p>更多的信息，参考：</p>
-            <pre><code style="text-align: center;">git log --help</code></pre>
-        </section>
-
-        <section data-background="#369">
-            <h2>撤销</h2>
-            <p>撤销文件的添加到暂存区操作:</p>
-            <pre><code style="text-align: center;">git reset HEAD -- [filename]</code></pre>
-            <p>回退到某次commit提交</p>
-            <pre><code style="text-align: center;">git reset [commitId]</code></pre>
-            <p>回退到上个版本</p>
-            <pre><code style="text-align: center;">git reset HEAD~1</code></pre>
-        </section>
-
-        <section data-background="#690">
-            <h2>良好的操作习惯</h2>
-            <ul>
-                <li>
-                    <p><strong>及时更新</strong></p>
-				</li>
-				<li>
-                    <p><strong>修改本地文件前,建议更新</strong></p>
-				</li>
-				<li>
-                    <p><strong>代码定期进行全目录的更新</strong></p>
-                </li>
-				<li>
-                    <p><strong>自动生成的文件,不要上传</strong></p>
-                </li>
-            </ul>
-        </section>
-
-        <section data-background="#690">
-            <h2>良好的操作习惯</h2>
-            <ul>
-                <li>
-                    <p><strong>Log 信息</strong></p>
-
-                    <p>每次 commit 时,写清楚本次修改的信息, 比如 修改功能描述, bug fix 信息</p>
-                </li>
-
-                <li>
-                    <p><strong>有计划地建立分支</strong></p>
-
-                    <p>自动合并不一定正确,合并后需检查。</p>
-                </li>
-            </ul>
+        	<h2>官方网站</h2>
+			<p></p>
+            <p>https://framework7.io/</p>
+			<p>------------v5.2.0-----------</p>
+			<p><br/></p>
+			<p>http://www.framework7.cn/</p>
+			<p>------------v4.4.3-----------</p>
+			<p><br/></p>
+			<p>http://framework7.taobao.org/</p>
+			<p>------------阿里搭建的中文版-----------</p>
         </section>
 
         <section data-background="#369">
